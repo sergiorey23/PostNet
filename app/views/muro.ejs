@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+
+-->
+<html>
+<head>
+    <title>PostNet</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <script src="/js/comunes/jsNav.js" type="text/javascript"></script>
+    <link href="/css/cssComunes/styleNav.css" rel="stylesheet" type="text/css"/>
+
+
+    <script src="/js/jsMuro.js" type="text/javascript"></script>
+
+    <link href="/css/cssComunes/styleNav.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/styleMuro.css" rel="stylesheet" type="text/css"/>
+
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <% include comunes/nav.ejs %>
+
+    <aside id="barraDerecha">
+        <a href="/perfil/informacion?muro">
+            <div id="infoUsuario" class="row">
+                <div class="col-md-5">
+                    <img id="fotoPerfil" src="<%= user.avatar %>"  alt=""/>
+                </div>
+                <div class="col-md-7">
+                    <h5 id="aliasUsuarioPerfilGran"><b>@ <%= user.alias %> </b></h5>
+                    <h5 id="nombreUsuarioPerfilGran"><%= user.nombre %> <span id="apellidosUsuarioPerfilGran"><%= user.apellidos %></span></h5>
+                </div>
+            </div>
+        </a>
+        <div id="estadisticas" class="row">
+
+            <div id="divPublicaciones" class="col-md-6">
+                <a href="/perfil">
+                    <p class="texMiPerfil">Publicaciones</p>
+                    <p class="numMiPerfil"><%= postsLength %></p>
+                </a>
+            </div>
+
+            <div id="divSeguidores" class="col-md-6">
+                <a href="/perfil/contactos?muro">
+                    <p class="texMiPerfil">Contactos</p>
+                    <p class="numMiPerfil"><%= contactos %></p>
+                </a>
+            </div>
+
+        </div>
+    </aside>
+    <% if (usuarios.length > 0) { %>
+    <aside id="barraIzquierda" class="esconderPetit">
+        <div class="row esconderPetit" id="headRecomendaciones">
+            <p class="col-md-7" id="titolRecomendaciones"> Algunos usuarios</p>
+            <a class="col-md-5" href="perfil/usuarios?muro"> <p id="verTodos">Ver todos</p> </a>
+        </div>
+        <% for (var usuario of usuarios) { %>
+        <hr class="separacion row"/>
+        <div class="row usuarioMuro" id="<%= usuario.alias %>">
+            <div class="imag">
+                <a href="/contacto?contacto=<%= usuario.alias %>"><img class="imagenContacto img-thumbnail" src="<%= usuario.avatar %>" alt=""/></a>
+            </div>
+            <h6 class="nombreContacto">  <a href="/contacto?contacto=<%= usuario.alias %>"><b>@ <%= usuario.alias %></a></b></h6>
+            <a class="agregarUsuario" onClick="addUser('<%= usuario.alias %>')">
+                <p class="btnAgregarContacto">
+                    <img  class="iconoAgregarContacto" width=12% height=12% src="../img/agregar.png" alt=""/>
+                    Agregar a contactos
+                </p>
+            </a>
+        </div>
+        <% } } %>
+
+    </aside>
+    <div id="divContenedorPublicacionesMuro" class="container" style="height:auto;"> 
+
+    </div>
+
+    <script type="text/javascript">
+        var posts = <%- JSON.stringify(posts) %>;
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,284 @@
+
+/*CABEÇERA PUBLICACION*/
+.publicacion{
+    margin:30px;
+}
+.cabeçeraPublicacion{
+    margin-top:30px;
+    padding-top: 5px;
+    border:1px solid blanchedalmond;
+    background: #f4f6f7;
+    height: 80px;
+
+}
+.imgPerfilPublicacion{
+    width: 60px;
+    height:  60px;
+    border-radius:50%;
+    border:black 1px solid;
+    margin:5px 0;
+}
+#mostrarNuevaPublicacion{
+    margin-top:10px;
+}
+
+
+.descripcionPublicacion{
+    margin:10px 0 0 0;
+    font-weight: bold;
+}
+
+
+.horaRealizacion{
+    display: inline;
+    margin-top:3px;
+}
+
+.ubicacion{
+    display:inline;
+    margin-top:3px;
+    text-align: right;
+    padding-right: 20px;
+
+}
+.lugarPublicacion{
+    font-style:italic;
+}
+
+/*COMENTARIO*/
+.cuerpoPublicacion{
+    border:1px solid blanchedalmond;
+    padding:10px;
+    margin-bottom:0;
+    background-color: #eaeef2;
+}
+
+/*TEXTO*/
+.divTextoPublicacion{
+    border:1px #e9ecee solid ;
+    padding:4px;
+    background-color: whitesmoke;
+    width:100%;
+
+}
+.textoPublicacion{
+    font-family: sans-serif;
+    text-align:justify;
+    font-weight: bold;
+    margin:10px;
+}
+
+/*LINK*/
+.divLinkPublicacion{
+    margin-top:10px;
+    border:1px #e9ecee solid ;
+    padding:10px 4px 0 4px;
+    background-color: whitesmoke;
+    width:100%;
+}
+.linkPublicacion{
+    color:black;
+    margin-left:10px;
+    word-wrap: break-word; 
+
+}
+
+/*IMAGEN*/
+.divImagenPublicacion{
+    margin-top:10px;
+    border:1px #e9ecee solid ;
+    padding:20px 4px;
+    background-color: whitesmoke;
+    width:100%;
+    display:flex;
+    justify-content: center;
+}
+
+.imagenPublicacion{
+    border:black 1px solid;
+    height:auto;
+
+
+}
+
+/*COMENTARIOS*/
+
+.contenedorComentPub{
+    display:flex;
+    justify-content: center;
+    background-color:  #eaeef2;
+
+}
+
+.comentariosPublicacion{
+    width:600px;
+    padding:10px;
+    margin-bottom:0;
+
+
+}
+.divScroll{
+    max-height: 300px;
+    overflow-y:  auto;
+    overflow-x:  hidden;
+}
+.divComentario{
+    margin-top:10px;
+    border:1px #e9ecee solid ;
+    background-color: whitesmoke;
+}
+.divImagComentario{
+    display:flex;
+    justify-content:center;
+}
+.imgPerfilComentario{
+    width:45px;
+    height: 45px;
+    border-radius:50%;
+    border:black solid 1px;
+    margin-top:5px;
+    margin-left:25px;
+}
+
+.tituloComentario{
+    margin-top:5px;
+    margin-bottom:0;
+    font-weight:bold;
+    margin-left:10px;
+}
+
+.nombreUsuarioComentario{
+    font-style:italic;
+}
+.comentario{
+    margin-left:10px;
+}
+
+/*NUEVO COMENTARIO*/
+.divNuevoComentarioPub1{
+    height:100px;
+    margin-top:30px;
+    border:1px antiquewhite solid ;
+    background-color: whitesmoke;
+}
+.comentarioNuevo{
+    width:100%;
+    margin:15px;
+}
+
+textarea{
+    border:1px solid antiquewhite;
+
+}
+.enviarComentario{
+    margin-top:30px;
+    float:right;
+    margin-right:2%;
+}
+
+textarea:focus{
+    border-color: rgba(255, 144, 0, 0.8);
+
+}
+
+@media (min-width:1000px){
+    .comentarioNuevo{
+        width:80%;
+    }
+    .enviarComentario{
+        margin-right:20px;
+    }
+}
+
+
+
+
+
+
+
+
+/*DIV NUEVA PUBLICACION*/
+.nuevaPublicacion{
+    margin: 35px 0;
+    width:100%;
+
+    border-bottom:black 1px solid;
+    padding-bottom:15px;
+
+}
+.txtSeccionNuevaPublicacion{
+    text-align:right;
+}
+
+.titolNuevaPublicacion{
+    float:left;
+    font-size:25px;
+    margin-top:5px;
+}
+.listaOpcionesNuevaPublicacion{
+    list-style: none;
+    border-bottom: gainsboro solid 1px ;
+    height:40px;        
+    text-align:center;
+    padding-bottom:5px;
+}
+
+.opcionesNuevaPublicacion{
+    display:inline;
+    width:100px;
+    float:right;
+    height:100%;
+    margin:2px;
+}
+
+.divNuevaPublicacionTexto{
+    width:90%;
+    padding-left:8%;
+    margin:15px 0;
+
+}
+
+.textoNuevaPublicacion{
+    font-family: serif;
+}
+
+.divNuevaPublicacionLink{
+    width:90%;
+    padding-left:8%;
+    margin:15px 0;
+
+}
+
+.divNuevaPublicacionImagen{
+    width:90%;
+    padding-left:8%;
+}
+
+#imagenYBoton{
+    float:right;
+}
+#divBtnPublicar{
+    clear:both;
+    width:90%;
+    text-align: right;
+}
+.btnPublicar{
+    margin-top:30px;
+}
+@media (max-width:500px){
+    .opcionesNuevaPublicacion{
+        display:block;
+    }
+   
+    .imgPerfilComentario{
+    margin-left:5px;
+    }
+
+
+}
+@media(min-width:500px){
+    .esconderGran{
+        display: none;
+    }
+
+}

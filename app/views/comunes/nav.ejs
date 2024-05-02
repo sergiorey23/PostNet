@@ -1,0 +1,72 @@
+
+<nav id="contenido" class="container-fluid">
+    <div id="divRespuestaServidor" >
+        <p id="RespuestaServidor" class="esconder"></p>
+    </div>
+    <div class="row" >
+        <a href="/" style="color:black;">
+            <div id="divTitolNav">
+                <img id="logoNav" src="../img/logotipo.png" alt=""/>
+                <h4 id="titolLogoNav" > <b>PostNet</b></h4>
+            </div>
+        </a>
+        <div id="imaginary_container">
+            <div class="input-group stylish-input-group">
+                <input type="text" class="form-control"  placeholder="Search" id="buscador">
+                <span class="input-group-addon">
+                    <button class="buscar">
+                        <span class="glyphicon glyphicon-search" id="buscar"></span>
+                    </button>
+                </span>
+  
+            </div>
+            <div class="divResultadosBuscador esconder">
+                <div class="container containerResultadosBuscador">
+                    
+                    
+                </div>
+            </div>
+        </div>    
+        
+        <div id="divIconosNav">
+            <ul id="listaIconos">
+                <li class="itemIconoNav">
+                    <p class="numNoti" id="notificaciones">0</p>
+                    <img class="icono" src="../img/iconoGeneral.png" alt=""/>
+                </li>
+                <li class="itemIconoNav">
+                    <img class="icono" src="../img/match.png" alt=""/>
+                </li>
+                <li class="itemIconoNav">
+                    <a href="/perfil/contactos?muro">
+                        <p class="numNoti" id="notificacionContacto">0</p>
+                        <img  class="icono" src="../img/iconoAmigos.png" id="iconoAmigos" alt=""/>
+                    </a>
+                </li>
+                <li class="itemIconoNav">
+                    <a href="/perfil/mensajes?muro">
+                        <p class="numNoti" id="notificacionMensaje">0</p>
+                        <img class="icono" src="../img/iconoMensajes.png" alt=""/>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="divOpcionesNav"  class="row">
+        <ul id="listaOpcionesNav"  class="col-xs-12">
+            <li id="inicio" class=" itemOpcionesNav col-xs-4"><a href="/muro" class="enlaItem">Inicio</a></li>
+            <li id="PerfilInicio" class=" itemOpcionesNav col-xs-4"><div class="navPerfil"><a href="/perfil" class="enlaItem">Perfil </a></li>
+            <li id="miCuenta" class="itemOpcionesNav col-xs-4" ><p class="enlaItem">Mi cuenta</p>
+                <ul id="listaOpcionesMiCuentaNav" class="row" >
+                    <li id="btnConfiNav" class=" col-xs-12 col-md-6  itemMiCuentaNav"><a href="/perfil?config" class="enlaItem2"> Configuracion</li>
+                    <li id="btnSalirNav" class=" col-xs-12 col-md-6 itemMiCuentaNav"><a href="/muro/logout" class="enlaItem2" style="margin-top:0;">Salir</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    
+<script>
+   var notiPeticiones = "<%= user.notifications.peticiones %>";
+   var notiMensajes = "<%= user.notifications.mensajes %>";
+</script>
+</nav>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+
+-->
+<html>
+    <head>
+        <title>PostNet</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+        <script src="/js/jsMuro.js" type="text/javascript"></script>
+
+        <link href="/css/cssComunes/styleNav.css" rel="stylesheet" type="text/css"/>
+        <link href="/css/styleMuro.css" rel="stylesheet" type="text/css"/>
+
+        <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+    </head>
+    <body>
+    <% include comunes/nav.ejs %>
+
+        <div class="container">
+            <div class="row">
+                <aside id="barraDerecha" class="col-xs-12 col-md-3">
+                    <a href="/perfil/informacion">
+                        <div id="infoUsuario" class="row">
+                            <div class="col-md-5">
+                                <img id="fotoPerfil" src="../img/fotoPerfil.png" alt=""/>
+                            </div>
+                            <div class="col-md-7">
+                                <h5 id="aliasUsuarioPerfilGran"><%= user.nickname %> </h5>
+                                <h5 id="nombreUsuarioPerfilGran"><%= user.nombre %></h5>
+                                <h6 id="apellidosUsuarioPerfilGran"><%= user.apellidos %></h6>
+                            </div>
+                        </div>
+                    </a>
+                    <div id="estadisticas" class="row">
+
+                            <div id="divPublicaciones" class="col-md-6">
+                                <a href="/perfil/publicaciones">
+                                    <p class="texMiPerfil">Publicaciones</p>
+                                    <p class="numMiPerfil"> 0</p>
+                                </a>
+                            </div>
+
+                            <div id="divSeguidores" class="col-md-6">
+                                <a href="/perfil/contactos">
+                                    <p class="texMiPerfil">Contactos</p>
+                                    <p class="numMiPerfil"> 0</p>
+                                </a>
+                            </div>
+
+                    </div>
+                </aside>
+                <section class="col-xs-12 col-md-6" id="seccionPrincipal">
+                    <article class="publicacion">
+                        <div class="cabeçeraPublicacion row">
+                            <div class="col-xs-3 col-md-2">
+                                <img class="imgPerfilPublicacion" src="../img/fotoPerfil.png" alt=""/>
+                            </div>
+                            <div class="col-xs-9 col-md-10">
+                                <p class="descripcionPublicacion row">
+                                    <a href="#" class="perfilUsuarioPublicacion"><span class="nombreUsuarioPublicacion">Alejandro Cervantes</span> </a>
+                                </p>
+                                <div class="row">
+                                    <p class="horaRealizacion col-xs-5">
+                                        <span class="esconderPetit"> Hace</span> 20h
+                                    </p>
+                                    <p class="ubicacion col-xs-7">
+                                        <span class="esconderPetit"> Desde </span><span class="lugarPublicacion">Barcelona</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cuerpoPublicacion row">
+                            <div class="divTextoPublicacion">
+                                <p class="textoPublicacion">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                </p>
+                            </div>
+                            <div class="divLinkPublicacion ">
+                                <a href="https://www.alimmenta.com/dietas/adelgazamiento/adelgazar-10-kilos/">
+                                    <p class="linkPublicacion">
+                                        www.alimmenta.com/dietas/adelgazamiento/adelgazar-10-kilos/
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="divImagenPublicacion ">
+                                <a href="../img/fotoPortada.jpg">
+                                    <img  src="../img/fotoPortada.jpg" class="img-responsive imagenPublicacion">
+                                </a>
+                            </div>
+                        </div>
+                        <!--NO RESPONSIVE -->
+                        <div id="contenedorComentPub" class="row">
+                            <div class="comentariosPublicacion">
+                                <div class="divScroll">
+                                    <div class="divComentario row">
+                                        <div class="col-xs-2" class="divImgComentario">
+                                            <a href="#" class="perfilUsuarioComentario">
+                                                <img class="imgPerfilComentario" src="../img/fotoPerfil.png" alt=""/>
+                                            </a>
+                                        </div>
+                                        <div class="col-xs-10">
+                                            <p class="tituloComentario">
+                                                <a href="#" class="perfilUsuarioComentario"><span class="nombreUsuarioComentario">Gorge</span> </a>  comento esta publicación
+                                            </p>
+                                            <p class="comentario">
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="divComentario row">
+                                        <div class="col-xs-2">
+                                            <a href="#" class="perfilUsuarioComentario">
+                                                <img class="imgPerfilComentario" src="../img/fotoPerfil.png" alt=""/>
+                                            </a>
+                                        </div>
+                                        <div class="col-xs-10">
+                                            <p class="tituloComentario">
+                                                <a href="#" class="perfilUsuarioComentario"><span class="nombreUsuarioComentario">Gorge</span> </a>  comento esta publicación
+                                            </p>
+                                            <p class="comentario">
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="divComentario row">
+                                        <div class="col-xs-2">
+                                            <a href="#" class="perfilUsuarioComentario">
+                                                <img class="imgPerfilComentario" src="../img/fotoPerfil.png" alt=""/>
+                                            </a>
+                                        </div>
+                                        <div class="col-xs-10">
+                                            <p class="tituloComentario">
+                                                <a href="#" class="perfilUsuarioComentario"><span class="nombreUsuarioComentario">Gorge</span> </a>  comento esta publicación
+                                            </p>
+                                            <p class="comentario">
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="divComentario row">
+                                        <div class="col-xs-2">
+                                            <a href="#" class="perfilUsuarioComentario">
+                                                <img class="imgPerfilComentario" src="../img/fotoPerfil.png" alt=""/>
+                                            </a>
+                                        </div>
+                                        <div class="col-xs-10">
+                                            <p class="tituloComentario">
+                                                <a href="#" class="perfilUsuarioComentario"><span class="nombreUsuarioComentario">Gorge</span> </a>  comento esta publicación
+                                            </p>
+                                            <p class="comentario">
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="divNuevoComentarioPub1">
+                                    <div class="row">
+                                        <div class="col-xs-7 col-sm-7 col-md-9">
+                                            <textarea  class="comentarioNuevo" rows="3">
+
+                                            </textarea>
+                                        </div>
+                                        <div class="col-xs-5 col-sm-5 col-md-3" style="padding-left:5px;">
+                                            <button  type="button" class="enviarComentario btn btn-default" >Comentar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                </section>
+                <aside class="col-md-3" id="barraIzquierda">
+                    <div class="row" id="headRecomendaciones">
+                        <p class="col-md-8" id="titolRecomendaciones"> Quizas te suenen...</p>
+                        <a class=col-md-4" href="perfil/allUsuarios"> <p id="verTodos">Ver todos</p> </a>
+                    </div>
+                    <hr id="separacion" class="row"/>
+                    <div class="row">
+                        <div class="imag">
+                            <img class="imagenContacto" src="../img/fotoPerfil.png" alt=""/>
+                        </div>
+                        <h6 class="nombreContacto">  <a href="#">#AleCerGom12s</a></h6>
+                        <a href="#">
+                            <p class="btnAgregarContacto">
+                                <img  class="iconoAgregarContacto" width=12% height=12% src="../img/agregar.png" alt=""/>
+                                Agregar a contactos
+                            </p>
+                        </a>
+                    </div>
+                    <hr id="separacion" class="row"/>
+                    <div class="row">
+                        <div class="imag">
+                            <img class="imagenContacto" src="../img/fotoPerfil.png" alt=""/>
+                        </div>
+                        <h6 class="nombreContacto">  <a href="#">#AleCerGom12s</a></h6>
+                        <a href="#">
+                            <p class="btnAgregarContacto">
+                                <img  class="iconoAgregarContacto" width=12% height=12% src="../img/agregar.png" alt=""/>
+                                Agregar a contactos
+                            </p>
+                        </a>
+                    </div>
+                    <hr id="separacion" class="row"/>
+                    <div class="row">
+                        <div class="imag">
+                            <img class="imagenContacto" src="../img/fotoPerfil.png" alt=""/>
+                        </div>
+                        <h6 class="nombreContacto">  <a href="#">#AleCerGom12s</a></h6>
+                        <a href="#">
+                            <p class="btnAgregarContacto">
+                                <img  class="iconoAgregarContacto" width=12% height=12% src="../img/agregar.png" alt=""/>
+                                Agregar a contactos
+                            </p>
+                        </a>
+                    </div>
+                    <hr id="separacion" class="row"/>
+                    <div class="row">
+                        <div class="imag">
+                            <img class="imagenContacto" src="../img/fotoPerfil.png" alt=""/>
+                        </div>
+                        <h6 class="nombreContacto">  <a href="#">#AleCerGom12s</a></h6>
+                        <a href="#">
+                            <p class="btnAgregarContacto">
+                                <img  class="iconoAgregarContacto" width=12% height=12% src="../img/agregar.png" alt=""/>
+                                Agregar a contactos
+                            </p>
+                        </a>
+                    </div>
+                    <hr id="separacion" class="row"/>
+                    <div class="row">
+                        <div class="imag">
+                            <img class="imagenContacto" src="../img/fotoPerfil.png" alt=""/>
+                        </div>
+                        <h6 class="nombreContacto">  <a href="#">#AleCerGom12s</a></h6>
+                        <a href="#">
+                            <p class="btnAgregarContacto">
+                                <img  class="iconoAgregarContacto" width=12% height=12% src="../img/agregar.png" alt=""/>
+                                Agregar a contactos
+                            </p>
+                        </a>
+                    </div>
+
+                </aside>
+            </div>
+        </div>
+
+
+
+    </body>
+</html>

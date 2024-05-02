@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  h1 title
+  .main
+    .w3
+      .signin-form.profile
+        h3 Login
+        .login-form
+          form(action='#' method='post')
+            input(type='text' name='email' placeholder='E-mail' required='')
+            input(type='password' name='password' placeholder='Password' required='')
+            .tp
+              input(type='submit' value='LOGIN NOW')
+        .header-social.wthree
+          a.face(href='#')
+            h5 Facebook
+          a.goog(href='#')
+            h5 Google+
+          .clear
+        p
+          a(href='./registro.html')  Don&apos;t have an account?

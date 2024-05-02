@@ -1,0 +1,33 @@
+{
+  "name": "PostNet",
+  "version": "1.0.0",
+  "description": "POR FAVOR, NO INCLUYAS LOS MODULOS DE NODEJS EN EL REPOSITORIO",
+  "main": "server.js",
+  "dependencies": {
+    "bcrypt": "^2.0.1",
+    "body-parser": "^1.17.2",
+    "cookie-parser": "^1.4.3",
+    "debug": "^2.6.9",
+    "ejs": "^2.5.8",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "morgan": "^1.8.2",
+    "pg-promise": "^8.3.2",
+    "socket.io": "^2.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/sergiorey/PostNet.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/sergiorey/PostNet/issues"
+  },
+  "homepage": "https://gitlab.com/sergiorey/PostNet#README"
+}

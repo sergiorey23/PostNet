@@ -1,0 +1,16 @@
+<section id="tab1" class="container esconder">
+        <div class="divTitZona row" style="border-bottom: gainsboro solid 1px; margin:40px 0 40px 0;">
+            <h4 class="titInfo" id="titolInformacionPersonal" style="margin-left:40px;  font-size:25px;"> Información personal de @<%= user.alias %> </h4>
+        </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div id="contenedorInformacionUsuario" style="margin-bottom:5em" class="col-md-8">
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+
+<script>
+    var datosUsuario= <%- JSON.stringify(usuario) %>;
+</script>
+
+</section>

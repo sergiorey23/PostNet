@@ -1,0 +1,48 @@
+
+#divContenedorUsuarios{
+    padding:0 10px;
+    display:flex;
+    justify-content: center;
+}
+.usuario{
+    border:gainsboro 1px solid;
+    padding:5px;
+    margin: 30px 25px;
+    margin-top:0px;
+}
+
+.imgPerfilUsuario{
+        width: 100px;
+    height: 100px;
+    object-fit: fill;
+    border-radius:50%;
+
+}
+.divTituloMisContactos{
+    margin:40px 0 40px 0;
+    border-bottom: gainsboro 1px solid;
+}
+
+@media(max-width:1000px){
+    .infoUsuario, .opcUsuario{
+        margin-left:10px;
+
+    }
+}
+
+
+.nombreUsuario{
+    margin:0;
+}
+
+.aliasUsuario{
+    margin:0 0 10px 0;
+}
+
+.opcUsuario{
+
+}
+
+.btnAddUsuario{
+
+}

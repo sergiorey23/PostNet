@@ -1,0 +1,274 @@
+/*CAMBIO PARA TODAS LAS VISTAS EL SCROLLBAR*/
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+} 
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,1); 
+}
+
+/*ESTILO DE TODAS LAS PAGINAS*/
+.esconder{
+    display:none;
+}
+
+@media (max-width:500px){
+    .esconderGran{
+        display: visible;
+    }
+    .esconderPetit{
+        display:none;
+    }
+}
+
+
+
+
+#divRespuestaServidor{
+    width:100%;
+    position:fixed;
+    display:flex;
+    justify-content: center;
+    z-index: 3;
+}
+
+#RespuestaServidor{
+    background-color: #e2e2e2;
+    font-size:28px;
+    padding:3px;
+
+
+}
+#contenido{
+    background-color: beige;
+    height:140px;
+}
+/*LOGO Y TITOL*/
+#divTitolNav{
+    margin-top:20px;
+    margin-left:40px;
+}
+
+#logoNav{
+    min-height: 30px;
+    width: 40px;
+}
+
+#titolLogoNav{
+    display:inline; 
+    position:absolute; 
+    left:95px;
+    top:26px;
+    font-size: 25px;
+
+}
+@media (max-width:400px){
+    #titolLogoNav{
+        left:55px;
+    }
+    #divTitolNav{
+        margin-left:10px;
+    }
+}
+
+/*NOTIFICACION ICONOS*/
+#notificacionMensaje{
+    position:absolute;
+    top:-20px;
+    right:0px;
+}
+#notificacionContacto{
+    position:absolute;
+    right:40px;
+    top:-20px;
+}
+#notificaciones{
+    position:absolute;
+    right:130px;
+    top:-20px;
+}
+.numNoti{
+    border-radius: 50%;
+    width:25px;
+    text-align: center;
+    padding:2px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/*per igualar els colors dels icones*/
+#iconoAmigos{
+    opacity:0.5;
+}
+
+/*ICONOS*/
+#divIconosNav{
+    position:absolute; 
+    right:5%;
+    top:30px;
+}
+#divIconosNav a {
+    text-decoration: none;
+    color:black;
+}
+#listaIconos{
+    list-style: none;
+
+}
+.itemIconoNav{
+    display: inline;
+    width:10px;
+}
+.icono{
+    width: 40px;
+    display: inline;
+    cursor: pointer;
+}
+
+
+/*OPCIONES*/
+#divOpcionesNav{
+    margin-top:20px;
+    text-align:center;
+
+}
+#listaOpcionesNav, #listaOpcionesMiCuentaNav{
+    list-style: none;
+}
+.itemOpcionesNav{
+    display:inline;
+}
+
+.enlaItem{
+    color: black;
+    font-size:20px;
+    cursor: pointer;
+}
+.enlaItem:hover{
+    text-decoration:none;
+}
+.enlaItem2{
+    color: black;
+    font-size:18px;
+}
+.enlaItem2:hover{
+    text-decoration:none;
+}
+#listaOpcionesMiCuentaNav{
+    margin-top:-15px;
+    display:none;
+
+}
+@media (max-width:800px){
+    #listaOpcionesMiCuentaNav{
+        margin-top:-10px;
+
+
+    }
+    #btnConfiNav{
+        margin-bottom:10px;
+    }
+
+}
+
+#miCuenta:hover #listaOpcionesMiCuentaNav{
+    display:block;
+}
+
+
+/*BUSCADOR*/
+
+#imaginary_container{
+    margin-top:35px;
+    width: 20%;
+    margin-left:30%;
+    min-width:300px;
+    height:30px;
+
+}
+.stylish-input-group .input-group-addon{
+    background: white !important; 
+}
+.stylish-input-group .form-control{
+    border-right:0; 
+    box-shadow:0 0 0; 
+    border-color:#ccc;
+}
+.stylish-input-group button{
+    border:0;
+    background:transparent;
+}
+
+.divResultadosBuscador{
+    position:relative;
+    z-index: 100;
+    overflow-x: auto;
+    max-height:500px;
+    border:gainsboro solid 1px;
+    background-color: white;
+}
+
+.containerResultadosBuscador{
+    width:auto;
+    overflow-x: auto;
+}
+
+.resultadoBuscador{
+    border:gainsboro 1px solid;
+    margin:5px;
+    background-color: #f6f6f6;
+}
+.resultadoBuscador:hover{
+    background-color: #eee;
+}
+.imagenPerfilUsuarioBuscador{
+    border-radius:50%;
+    border:black 1px solid;
+}
+.aliasUsuarioBuscador{
+    margin:0;
+    padding:0;
+    margin-top:15px;
+}
+.nombreUsuarioBuscador{
+    margin:0;
+    margin-top:-3px;
+    padding:0;
+}
+
+
+/*COLOCACION EN MOVILES*/
+@media (max-width:767px){
+    #contenido{
+        height:200px;
+    }
+    #imaginary_container{
+        margin-top:80px;
+        width:80%;
+        margin-left:10px;
+    }
+    #listaOpcionesNav{
+        margin-top:-10px;
+        text-align:left;
+    }
+
+    #miCuenta{
+        margin-top:8px;
+    }
+    .itemMiCuentaNav{
+        margin-top:-10px;
+        text-align:left;
+        margin-left: -35px;
+    }
+
+    #btnSalirNav {
+        margin-top:-15px;
+    }
+
+}
+

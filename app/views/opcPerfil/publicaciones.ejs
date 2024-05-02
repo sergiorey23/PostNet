@@ -1,0 +1,61 @@
+
+<section id="tab0" class="container">
+    <div class="row">
+        <div class="container main">
+            <div class="nuevaPublicacion ">
+                <div>
+                    <ul class="listaOpcionesNuevaPublicacion">
+                        <li class="titolNuevaPublicacion"> Nueva publicación</li>
+                        <li id="opcImgNuevaPublic" class="opcionesNuevaPublicacion btn btn-default esconderPetit">Imagen</li>
+                        <li id="opcLinkNuevaPublic" class="opcionesNuevaPublicacion btn btn-default esconderPetit">Link</li>
+                        <li id="opcLocationNuevaPublic" class="opcionesNuevaPublicacion btn btn-default esconderPetit">Ubicación</li>
+                    </ul>
+                </div>
+                <form action="" id="publicar" method="post">
+                    <div class="divNuevaPublicacionTexto">
+                        <h4  class="txtSeccionNuevaPublicacion" id="txtComentarioNuevaPublicacion"> Comentario</h4>
+                        <textarea type="text" rows="3" name="textoPublicacion" class="form-control textoNuevaPublicacion"> </textarea>
+                    </div>
+                    <div id="divLinkNuevaPublicacion" class="divNuevaPublicacionLink esconderGran">
+                        <h4  class="txtSeccionNuevaPublicacion"> Link</h4>
+                        <input type="text" name="link" class="form-control linkNuevaPublicacion"/>
+                    </div>
+                    <div id="divImagenNuevaPublicacion" class="divNuevaPublicacionImagen esconderGran">
+                        <h4 class="txtSeccionNuevaPublicacion"> Imagen</h4>
+                        <div id="imagenYBoton">
+                            <input type=file size=60 name="imagen" class="imagenNuevaPublicacion"/>
+                        </div>
+                    </div>
+                    <div id="divLocationNuevaPublicacion" class="divNuevaPublicacionLink esconderGran">
+                        <h4 class="txtSeccionNuevaPublicacion"> Ubicación</h4>
+                        <input type="text" name="link" style="width: 20em;float: right" class="form-control locationNuevaPublicacion"/>
+                    </div>
+                    <div id="divBtnPublicar">
+                        <button class="btn btn-default btnPublicar" type="sumbit">Publicar</button>
+                    </div>
+                </form>
+
+            </div>
+            <span id="esconderNuevaPublicacion" class="btn btn-default glyphicon glyphicon-eject" ></span>
+            <span id="mostrarNuevaPublicacion" class="btn btn-default glyphicon glyphicon-eject esconder" style="transform:rotate(180deg);" ></span>
+
+
+            <div style="border-bottom: gainsboro solid 1px; margin-top:30px; ">
+                <h4 style="margin-left:40px;  font-size:25px;"> Tus publicaciones</h4>
+            </div>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8"  id="divContenedorPublicaciones">
+                    
+
+
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</section>

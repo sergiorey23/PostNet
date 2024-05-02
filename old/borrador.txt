@@ -1,0 +1,35 @@
+<!-- <% for (var contacto of contactos) { %>
+<div class="row contacto col-xs-12 col-md-5" id="contacto<%= contacto.alias %>">
+    <div class="col-xs-5 col-sm-4 col-md-5 col-lg-4" >
+        <img class="imgPerfilCon img-thumbnail" src="../img/fotoPerfil.png" alt=""/>
+    </div>
+    <div class="col-xs-7 col-sm-8 col-md-7 col-lg-8">
+        <div class="infoContacto">
+            <p class="nombreContacto"><b><%= contacto.nombre %></b></p>
+            <p class="aliasContacto"><%= contacto.alias %></p>
+        </div>
+        <div class="opcContacto">
+            <button type="button" class="btn btn-default btnEnviarMensaje">Enviar mensaje</button>
+            <button type="button" class="btnEliminar" name="<%= contacto.alias %>"><p class="EliminarContacto" >Eliminar contacto</p></button>
+        </div>
+    </div>
+</div>
+<% } %> -->
+
+
+<% for (var usuario of users) { %>
+<div class="row contacto col-xs-12 col-md-5">
+    <div class="col-xs-5 col-sm-4 col-md-5 col-lg-4" >
+        <img class="imgPerfilCon img-thumbnail" src="../img/fotoPerfil.png" alt=""/>
+    </div>
+    <div class="col-xs-7 col-sm-8 col-md-7 col-lg-8">
+        <div class="infoContacto">
+            <p class="nombreContacto"><b><%= usuario.nombre %></b></p>
+            <p class="aliasContacto"><%= usuario.alias %></p>
+        </div>
+        <div class="opcContacto">
+            <button type="button" id="<%= usuario.alias %>" class="btn btn-default btnAddContacto">Añadir contacto</button>
+        </div>
+    </div>
+</div>
+<% } %>

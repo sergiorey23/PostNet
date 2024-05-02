@@ -1,0 +1,33 @@
+<nav id="contenido2" class="container">
+    <div class="row" id="barraPerfil">
+        <div id="fondoPortada" class="row" >
+            <div class="col-xs-7 col-sm-6 col-md-5" id="">
+                <div class="row" id="perfil">
+                    <div class="col-xs-7" id="divFlexFotoPerfil">
+                        <img id="imagenPerfil" class="img-thumbnail" src="<%= usuario.avatar %>"  alt="Profile pic"/>
+                            <input type="file" onchange="setPic('avatar')" class="inputSubirImagenPerfil" style="overflow: hidden; position: absolute; visibility: hidden;"/>
+                    </div>
+                    <div class="col-xs-5" id="textoBarraPerfil">
+                        <h3 class="tuAlias">@<%= usuario.alias %></h3>
+                        <h4 style="max-width:90px; width:90px;"> <%= usuario.nombre %> <%= usuario.apellidos %></h4>
+
+                    </div>
+                </div>
+            </div>
+            <div id="divFlexFotoPortada" class="col-xs-5 col-sm-6 col-md-7">
+                    <input type="file" onchange="setPic('portada')" class="inputSubirImagenPortada" style="overflow: hidden; position: absolute;     visibility: hidden;"/>
+            </div>
+        </div>
+    </div>
+
+
+    <div  id="opcionesPerfil" class="row">
+        <li class="col-sm-4 col-md-4 opcPerf" id="opcPubliUsuario" name="publicaciones" >Publicaciones</li>
+        <li class="col-sm-4 col-md-4 opcPerf" id="opcInforUsuario" name="informacion">Información</li>
+        <li class="col-sm-4 col-md-4 opcPerf" id="opcContaUsuario" name="contactos">Contactos</li>
+    </div>
+</nav>
+<script>
+    $("#fondoPortada").css("background-image","url('<%= usuario.portada %>')");
+    var alias = "<%= usuario.alias %>";
+</script>

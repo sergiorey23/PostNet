@@ -1,0 +1,73 @@
+
+
+.divMensajes{
+    margin:40px 0 40px 0;
+    border-bottom: gainsboro 1px solid;
+}
+
+.divMensajeContacto{
+    margin:10px 0;
+}
+
+.mensajeContacto:hover{
+    background-color: rgba(180, 180, 180, 0.3);
+}
+
+.mensajeContacto{
+    border:black 1px solid; 
+    height:100%; 
+    border: gainsboro 1px solid;
+
+}
+
+.imagenPerfilContactoMensaje{
+    width: 80px;
+    height: 80px;
+    object-fit: fill;
+    border-radius:50%;
+    border:1px solid #13a7ba;
+    margin: 5px 0;
+}
+
+.aliasContactoMensaje{
+    margin:10px 0 0 5px;
+    font-size:17px;
+
+}
+
+.textoUtlimoMensaje{
+    margin:10px 0 0 5px;
+    color:#666666;
+}
+
+
+@media (max-width:400px){
+    .imagenPerfilContactoMensaje{
+        margin-left:-20px;
+    }
+}
+
+
+.mostrarChat{
+    height:100%;
+    width: 100%;
+    z-index: 200;
+    background-color: rgba(155, 155, 155, 0.4);
+    position:fixed;
+    z-index:100;
+    top:0;
+    left:0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    visibility: hidden;
+}
+
+.divPadreChat{
+    border:black 1px solid;
+    width:500px;
+    height:500px;
+
+    background-color:green;
+
+}

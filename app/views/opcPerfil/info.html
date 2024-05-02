@@ -1,0 +1,449 @@
+ft<section id="tab1" class="container esconder">
+    <script src="/js/jsOpcPerfil/jsInformacion.js" type="text/javascript"></script>
+
+    <div class="row">
+        <div id="divAsideOpcionesInfo" class="col-md-3">
+            <aside id="opcionesInformacion">
+                <div id="divListaOpcionesInformacion">
+                    <li class="form-control opcionInformacion" id="opcInfo_informacionPersonal"> Informacion personal</li>
+                    <li class="form-control opcionInformacion" id="opcInfo_informacionContacto"> Informacion contacto</li>
+                    <li class="form-control opcionInformacion" id="opcInfo_matcher"> Matcher</li>
+                    <li class="form-control opcionInformacion" id="opcInfo_configuracionCuenta"> Configuracion Cuenta</li>
+                </div>
+            </aside>
+        </div>
+        <div class="col-xs-12 col-md-9">
+            <div id="informacionPersonal">
+                <div class="divTitZona row">
+                    <h4 class="titInfo" id="titolInformacionPersonal"> Información personal </h4>
+                </div>
+                <div id="camposInfoPersonal">
+                    <div class="divRow row" id="divAliasInfo">
+                        <p class="pCampo col-xs-2 col-md-3" for="aliasInf">Alias</p>
+
+                        <div id="divAliasAntiguo" class="col-xs-7 col-md-7 divContenidoAntiguo">
+                            <input id="inputaliasAntiguo" name="aliasInfAnt" type="text" class="form-control inpAnt" placeholder="Alias" value="<%= user.alias %>" readonly="true">  </input>
+
+                        </div>
+                        <div id="divBtnEditarAlias" class="divBtnEditarInput col-xs-3 col-md-2">
+                            <span id="editar_Alias" class="btnEditarInput btn btn-default glyphicon glyphicon-pencil"><p class="textoBtnEditar">Editar</p></span>
+                        </div>
+
+                        <div id="divAliasNuevo" class="col-xs-7 col-md-7 divContenidoAntiguo esconder">
+                            <input id="inputaliasNuevo" name="aliasInfNue" type="text" class="form-control inpNue" placeholder="Alias" value="<%= user.alias %>"/>
+                        </div>
+                        <div id="divBtnEnviarAlias" class="divBtnEnviarInput col-xs-3 col-md-2 esconder">
+                            <button id="btnEnviar_alias" class="enviar" > <span id="finalizarEdicion_Alias"  class="btnEnviarInput glyphicon glyphicon-ok"></span></button>
+                        </div>
+                    </div>
+                    <div class="divRow row" id="divNombreInfo">
+                        <p class="pCampo col-xs-2 col-md-3" for="nombreInf">Nombre</p>
+
+                        <div id="divNombreAntiguo" class="col-xs-7 col-md-7 divContenidoAntiguo">
+                            <input id="inputnombreAntiguo" name="nombreInfAnt" type="text" class="form-control inpAnt" placeholder="Nombre" value="<%= user.nombre %>" readonly="true">  </input>
+
+                        </div>
+                        <div id="divBtnEditarNombre" class="divBtnEditarInput col-xs-3 col-md-2">
+                            <span id="editar_Nombre" class="btnEditarInput btn btn-default glyphicon glyphicon-pencil"><p class="textoBtnEditar">Editar</p></span>
+                        </div>
+
+                        <div id="divNombreNuevo" class="col-xs-7 col-md-7 divContenidoAntiguo esconder">
+                            <input id="inputnombreNuevo" name="nombreInfNue" type="text" class="form-control inpNue" placeholder="Nombre" value="<%= user.nombre %>"/>
+                        </div>
+                        <div id="divBtnEnviarNombre" class="divBtnEnviarInput col-xs-3 col-md-2 esconder">
+                            <button id="btnEnviar_nombre" class="enviar"> <span id="finalizarEdicion_Nombre"  class="btnEnviarInput glyphicon glyphicon-ok"></span></button>
+                        </div>
+                    </div>
+                    <div class="divRow row" id="divApellidosInfo">
+                        <p class="pCampo col-xs-2 col-md-3" for="apellidosInf">Apellidos</p>
+
+                        <div id="divApellidosAntiguo" class="col-xs-7 col-md-7 divContenidoAntiguo">
+                            <input id="inputapellidosAntiguo" name="apellidosInfAnt" type="text" class="form-control inpAnt" placeholder="Apellidos" value="<%= user.apellidos %>" readonly="true">  </input>
+
+                        </div>
+                        <div id="divBtnEditarApellidos" class="divBtnEditarInput col-xs-3 col-md-2">
+                            <span id="editar_Apellidos" class="btnEditarInput btn btn-default glyphicon glyphicon-pencil"><p class="textoBtnEditar">Editar</p></span>
+                        </div>
+
+                        <div id="divApellidosNuevo" class="col-xs-7 col-md-7 divContenidoAntiguo esconder">
+                            <input id="inputapellidosNuevo" name="apellidosInfNue" type="text" class="form-control inpNue" placeholder="Apellidos" value="<%= user.apellidos %>"/>
+                        </div>
+                        <div id="divBtnEnviarApellidos" class="divBtnEnviarInput col-xs-3 col-md-2 esconder">
+                            <button class="enviar" id="btnEnviar_apellidos" > <span id="finalizarEdicion_Apellidos"  class="btnEnviarInput glyphicon glyphicon-ok"></span></button>
+                        </div>
+                    </div>
+                    <div class="divRow row" id="divTrabajoInfo">
+                        <p class="pCampo col-xs-2 col-md-3" for="trabajoInf">Trabajo</p>
+
+                        <div id="divTrabajoAntiguo" class="col-xs-7 col-md-7 divContenidoAntiguo">
+                            <input id="inputtrabajoAntiguo" name="trabajoInfAnt" type="text" class="form-control inpAnt" placeholder="Trabajo" value="<%= user.trabajo %>" readonly="true">  </input>
+
+                        </div>
+                        <div id="divBtnEditarTrabajo" class="divBtnEditarInput col-xs-3 col-md-2">
+                            <span id="editar_Trabajo" class="btnEditarInput btn btn-default glyphicon glyphicon-pencil"><p class="textoBtnEditar">Editar</p></span>
+                        </div>
+
+                        <div id="divTrabajoNuevo" class="col-xs-7 col-md-7 divContenidoAntiguo esconder">
+                            <input id="inputtrabajoNuevo" name="trabajoInfNue" type="text" class="form-control inpNue" placeholder="Trabajo" value="<%= user.trabajo %>"/>
+                        </div>
+                        <div id="divBtnEnviarTrabajo" class="divBtnEnviarInput col-xs-3 col-md-2 esconder">
+                            <button class="enviar" id="btnEnviar_trabajo" > <span id="finalizarEdicion_Trabajo"  class="btnEnviarInput glyphicon glyphicon-ok"></span></button>
+                        </div>
+                    </div>
+                    <div class="divRow row" id="divEstudiosInfo">
+                        <p class="pCampo col-xs-2 col-md-3" for="estudiosInf">Estudios</p>
+
+                        <div id="divEstudiosAntiguo" class="col-xs-7 col-md-7 divContenidoAntiguo">
+                            <textarea id="inputestudiosAntiguo" name="estudiosInfAnt" type="text" class="form-control inpAnt" placeholder="Estudios" value="<%= user.estudios %>" readonly="true"> <%= user.estudios %> </textarea>
+
+                        </div>
+                        <div id="divBtnEditarEstudios" class="divBtnEditarInput col-xs-3 col-md-2">
+                            <span id="editar_Estudios" class="btnEditarTextArea btn btn-default glyphicon glyphicon-pencil"><p class="textoBtnEditar">Editar</p></span>
+                        </div>
+
+                        <div id="divEstudiosNuevo" class="col-xs-7 col-md-7 divContenidoAntiguo esconder">
+                            <textarea id="inputestudiosNuevo" name="estudiosInfNue" type="text" class="form-control inpNue" placeholder="Estudios" value="<%= user.estudios %>"><%= user.estudios %></textarea>
+                        </div>
+                        <div id="divBtnEnviarEstudios" class="divBtnEnviarInput col-xs-3 col-md-2 esconder">
+                            <button class="enviar" id="btnEnviar_estudios" > <span id="finalizarEdicion_Estudios"  class="btnEnviarTextArea glyphicon glyphicon-ok"></span></button>
+                        </div>
+                    </div>
+                    <div class="divRow row" id="divFechaNacimiento">
+
+                        <p class="pCampo col-xs-2 col-md-3" id="campoFechaNacimiento" for="fechaNacimientoInf">Fecha nacimiento</p>
+                        <% var fecha = user.fechanacimiento.split('/'); %>
+                        <div id="divFechaNacimientoAntiguo" class="col-xs-7 col-md-7 divContenidoSelect">
+                            <select class="form-control selectFechaNacimiento" name="<%= fecha[2] %>" disabled id="dia"></select>
+                            <select class="form-control selectFechaNacimiento" name="<%= fecha[1] %>" disabled id="mes"></select>
+                            <select class="form-control selectFechaNacimiento" name="<%= fecha[0] %>" disabled id="año"></select>
+                        </div>
+                        <div id="divBtnEditarFechaNacimiento" class="divBtnEditarInput col-xs-3 col-md-2">
+                            <span id="editar_FechaNacimiento" class="btnEditarSelect btn btn-default glyphicon glyphicon-pencil"><p class="textoBtnEditar">Editar</p></span>
+                        </div>
+                        <div id="divBtnEnviarFechaNacimiento" class="divBtnEnviarInput col-xs-3 col-md-2 esconder">
+                            <button class="enviar" id="btnEnviar_fechanacimiento" > <span id="finalizarEdicion_FechaNacimiento"  class="btnEnviarSelect glyphicon glyphicon-ok"></span></button>
+                        </div>
+
+                    </div>
+                    <div class="divRow row" id="divSexo">
+
+                        <p class="pCampo col-xs-2 col-md-3" id="campoSexo" for="sexoInf">Sexo </p>
+
+                        <div id="divSexoAntiguo" class="col-xs-7 col-md-7 divContenidoCheckBox" value="<%= user.sexo %>">
+                            <div class="row">
+                                <div id="divHombre" class="col-xs-6">
+                                    <p for="chHombre" class="pSexo"> H</p>
+                                    <input name="chHombre" type="checkbox" class="form-check-input chSex" id="chHombreSexo"/>
+                                </div>
+                                <div id="divMujer" class="col-xs-6">
+                                    <p for="chMujer" class="pSexo"> M </p>
+                                    <input name="chMujer"  type="checkbox" class="form-check-input chSex" id="chMujerSexo"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="divBtnEditarSexo" class="divBtnEditarInput col-xs-3 col-md-2">
+                            <span id="editar_Sexo" class="btnEditarSelect btn btn-default glyphicon glyphicon-pencil"><p class="textoBtnEditar">Editar</p></span>
+                        </div>
+                        <div id="divBtnEnviarSexo" class="divBtnEnviarInput col-xs-3 col-md-2 esconder">
+                            <button class="enviar" id="btnEnviar_sexo" > <span id="finalizarEdicion_Sexo"  class="btnEnviarSelect glyphicon glyphicon-ok"></span></button>
+                        </div>
+
+                    </div>
+                    <div class="divRow row" id="divEstadoCivil">
+
+                        <p class="pCampo col-xs-2 col-md-3" id="campoEstadoCivil" for="estadoCivilInf">EstadoCivil </p>
+
+                        <div id="divEstadoCivilAntiguo" class="col-xs-7 col-md-7 divContenidoSelect">
+                            <select disabled class="form-control selectEstadoCivil" value="<%= user.estadocivil %>" style="height: 35px; width:150px;">
+                                <option class="optionEstadoCivil" value="Divorciado">Divorciado</option>
+                                <option class="optionEstadoCivil" value="Soltero">Soltero</option>
+                                <option class="optionEstadoCivil" value="Viudo">Viudo</option>
+                                <option class="optionEstadoCivil" value="Comprometido">Comprometido</option>
+                                <option class="optionEstadoCivil" value="Separado">Separado</option>
+                                <option class="optionEstadoCivil" value="Complicado">Es complicado</option>
+                            </select>
+                        </div>
+                        <div id="divBtnEditarEstadoCivil" class="divBtnEditarInput col-xs-3 col-md-2">
+                            <span id="editar_EstadoCivil" class="btnEditarSelect btn btn-default glyphicon glyphicon-pencil"><p class="textoBtnEditar">Editar</p></span>
+                        </div>
+                        <div id="divBtnEnviarEstadoCivil" class="divBtnEnviarInput col-xs-3 col-md-2 esconder">
+                            <button class="enviar" id="btnEnviar_estadocivil"> <span id="finalizarEdicion_EstadoCivil"  class="btnEnviarSelect glyphicon glyphicon-ok"></span></button>
+                        </div>
+
+                    </div>
+                    <div class="divRow row" id="divIdioma">
+
+                        <p class="pCampo col-xs-2 col-md-3" id="campoIdioma" for="idiomaInf">Idioma</p>
+
+                        <div id="divIdiomaAntiguo" class="col-xs-7 col-md-7 divContenidoSelect">
+                            <select disabled class="form-control selectIdioma" value="<%= user.idioma %>" style="height: 35px; width:150px;">
+                                <option class="optionIdioma">Catalan</option>
+                                <option class="optionIdioma">Ingles</option>
+                                <option class="optionIdioma">Castellano</option>
+                                <option class="optionIdioma">Aleman</option>
+                                <option class="optionIdioma">Françes</option>
+                            </select>
+                        </div>
+                        <div id="divBtnEditarIdioma" class="divBtnEditarInput col-xs-3 col-md-2">
+                            <span id="editar_Idioma" class="btnEditarSelect btn btn-default glyphicon glyphicon-pencil"><p class="textoBtnEditar">Editar</p></span>
+                        </div>
+                        <div id="divBtnEnviarIdioma" class="divBtnEnviarInput col-xs-3 col-md-2 esconder">
+                            <button class="enviar" id="btnEnviar_idioma"> <span id="finalizarEdicion_Idioma"  class="btnEnviarSelect glyphicon glyphicon-ok"></span></button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div id="informacionContacto">
+                <div class="divTitZona row">
+                    <h4 class="titInfo" id="titolInformacionContacto"> Información contacto </h4>
+                </div>
+                <div class="divRow row" id="divCorreoInfo">
+                    <p class="pCampo col-xs-2 col-md-3" for="emailInf">Correo</p>
+
+                    <div id="divCorreoAntiguo" class="col-xs-7 col-md-7 divContenidoAntiguo">
+                        <input id="inputemailAntiguo" name="emailInfAnt" type="text" class="form-control inpAnt" placeholder="email" value="<%= user.email %>" readonly="true">  </input>
+
+                    </div>
+                    <div id="divBtnEditarCorreo" class="divBtnEditarInput col-xs-3 col-md-2">
+                        <span id="editar_Correo" class="btnEditarInput btn btn-default glyphicon glyphicon-pencil"><p class="textoBtnEditar">Editar</p></span>
+                    </div>
+
+                    <div id="divCorreoNuevo" class="col-xs-7 col-md-7 divContenidoAntiguo esconder">
+                        <input id="inputemailNuevo" name="emailInfNue" type="text" class="form-control inpNue" placeholder="Correo" value="<%= user.email %>"/>
+                    </div>
+                    <div id="divBtnEnviarCorreo" class="divBtnEnviarInput col-xs-3 col-md-2 esconder">
+                        <button class="enviar" id="btnEnviar_email"> <span id="finalizarEdicion_Correo"  class="btnEnviarInput glyphicon glyphicon-ok"></span></button>
+                    </div>
+                </div>
+                <div class="divRow row" id="divMovilInfo">
+                    <p class="pCampo col-xs-2 col-md-3" for="movilInf">Movil</p>
+
+                    <div id="divMovilAntiguo" class="col-xs-7 col-md-7 divContenidoAntiguo">
+                        <input id="inputmovilAntiguo" name="movilInfAnt" type="text" class="form-control inpAnt" placeholder="Movil" value="<%= user.movil %>" readonly="true">  </input>
+
+                    </div>
+                    <div id="divBtnEditarMovil" class="divBtnEditarInput col-xs-3 col-md-2">
+                        <span id="editar_Movil" class="btnEditarInput btn btn-default glyphicon glyphicon-pencil"><p class="textoBtnEditar">Editar</p></span>
+                    </div>
+
+                    <div id="divMovilNuevo" class="col-xs-7 col-md-7 divContenidoAntiguo esconder">
+                        <input id="inputmovilNuevo" name="movilInfNue" type="text" class="form-control inpNue" placeholder="Movil" value="<%= user.movil %>"/>
+                    </div>
+                    <div id="divBtnEnviarMovil" class="divBtnEnviarInput col-xs-3 col-md-2 esconder">
+                        <button class="enviar" id="btnEnviar_movil"> <span id="finalizarEdicion_Movil"  class="btnEnviarInput glyphicon glyphicon-ok"></span></button>
+                    </div>
+                </div>
+                <div class="divRow row" id="divFijoInfo">
+                    <p class="pCampo col-xs-2 col-md-3" for="fijoInf">Fijo</p>
+
+                    <div id="divFijoAntiguo" class="col-xs-7 col-md-7 divContenidoAntiguo">
+                        <input id="inputfijoAntiguo" name="fijoInfAnt" type="text" class="form-control inpAnt" placeholder="Fijo" value="<%= user.fijo %>" readonly="true">  </input>
+
+                    </div>
+                    <div id="divBtnEditarFijo" class="divBtnEditarInput col-xs-3 col-md-2">
+                        <span id="editar_Fijo" class="btnEditarInput btn btn-default glyphicon glyphicon-pencil"><p class="textoBtnEditar">Editar</p></span>
+                    </div>
+
+                    <div id="divFijoNuevo" class="col-xs-7 col-md-7 divContenidoAntiguo esconder">
+                        <input id="inputfijoNuevo" name="fijoInfNue" type="text" class="form-control inpNue" placeholder="Fijo" value="<%= user.fijo %>"/>
+                    </div>
+                    <div id="divBtnEnviarFijo" class="divBtnEnviarInput col-xs-3 col-md-2 esconder">
+                        <button class="enviar" id="btnEnviar_fijo"> <span id="finalizarEdicion_Fijo"  class="btnEnviarInput glyphicon glyphicon-ok"></span></button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="matcher">
+                <div class="divTitZona row">
+                    <h4 class="titInfo" id="titolInformacionMatcher"> Matcher </h4>
+                </div>
+                <div class="divRow row" id="divDescripcionInfo">
+                    <p class="pCampo col-xs-2 col-md-3" for="descripcionInf">Descripcion</p>
+
+                    <div id="divDescripcionAntiguo" class="col-xs-7 col-md-7 divContenidoAntiguo">
+                        <textarea id="inputdescripcionAntiguo" name="descripcionInfAnt" type="text" class="form-control inpAnt" placeholder="Descripcion" value="<%= user.descripcion %>" readonly="true"> <%= user.descripcion %> </textarea>
+
+                    </div>
+                    <div id="divBtnEditarDescripcion" class="divBtnEditarInput col-xs-3 col-md-2">
+                        <span id="editar_Descripcion" class="btnEditarTextArea btn btn-default glyphicon glyphicon-pencil"><p class="textoBtnEditar">Editar</p></span>
+                    </div>
+
+                    <div id="divDescripcionNuevo" class="col-xs-7 col-md-7 divContenidoAntiguo esconder">
+                        <textarea id="inputdescripcionNuevo" name="descripcionInfNue" type="text" class="form-control inpNue" placeholder="Descripcion" value="<%= user.descripcion %>"><%= user.descripcion %></textarea>
+                    </div>
+                    <div id="divBtnEnviarDescripcion" class="divBtnEnviarInput col-xs-3 col-md-2 esconder">
+                        <button class="enviar" id="btnEnviar_descripcion" > <span id="finalizarEdicion_Descripcion"  class="btnEnviarTextArea glyphicon glyphicon-ok"></span></button>
+                    </div>
+                </div>
+                <div class="divRow row" id="divPoblacionInfo">
+                    <p class="pCampo col-xs-2 col-md-3" for="poblacionInf">Poblacion</p>
+                    <div id="divPoblacionAntiguo" class="col-xs-7 col-md-7 divContenidoAntiguo">
+                        <input id="inputpoblacionAntiguo" name="poblacionInfAnt" type="text" class="form-control inpAnt" placeholder="Poblacion" value="<%= user.poblacion %>" readonly="true">  </input>
+                    </div>
+                    <div id="divBtnEditarPoblacion" class="divBtnEditarInput col-xs-3 col-md-2">
+                        <span id="editar_Poblacion" class="btnEditarInput btn btn-default glyphicon glyphicon-pencil"><p class="textoBtnEditar">Editar</p></span>
+                    </div>
+                    <div id="divPoblacionNuevo" class="col-xs-7 col-md-7 divContenidoAntiguo esconder">
+                        <input id="inputpoblacionNuevo" name="poblacionInfNue" type="text" class="form-control inpNue" placeholder="Poblacion" value="<%= user.poblacion %>"/>
+                    </div>
+                    <div id="divBtnEnviarPoblacion" class="divBtnEnviarInput col-xs-3 col-md-2 esconder">
+                        <button class="enviar" id="btnEnviar_poblacion"> <span id="finalizarEdicion_Poblacion"  class="btnEnviarInput glyphicon glyphicon-ok"></span></button>
+                    </div>
+                </div>
+                <div class="divRow row" id="divCalleInfo">
+                    <p class="pCampo col-xs-2 col-md-3" for="calleInf">Calle</p>
+
+                    <div id="divCalleAntiguo" class="col-xs-7 col-md-7 divContenidoAntiguo">
+                        <input id="inputcalleAntiguo" name="calleInfAnt" type="text" class="form-control inpAnt" placeholder="Calle" value="<%= user.calle %>" readonly="true">  </input>
+
+                    </div>
+                    <div id="divBtnEditarCalle" class="divBtnEditarInput col-xs-3 col-md-2">
+                        <span id="editar_Calle" class="btnEditarInput btn btn-default glyphicon glyphicon-pencil"><p class="textoBtnEditar">Editar</p></span>
+                    </div>
+
+                    <div id="divCalleNuevo" class="col-xs-7 col-md-7 divContenidoAntiguo esconder">
+                        <input id="inputcalleNuevo" name="calleInfNue" type="text" class="form-control inpNue" placeholder="Calle" value="<%= user.calle %>"/>
+                    </div>
+                    <div id="divBtnEnviarCalle" class="divBtnEnviarInput col-xs-3 col-md-2 esconder">
+                        <button class="enviar" id="btnEnviar_calle" > <span id="finalizarEdicion_Calle"  class="btnEnviarInput glyphicon glyphicon-ok"></span></button>
+                    </div>
+                </div>
+                <div class="divRow row" id="divInteres">
+
+                    <p class="pCampo col-xs-2 col-md-3" id="campoInteres" for="interesInf">Interes </p>
+
+                    <div id="divInteresAntiguo" class="col-xs-7 col-md-7 divContenidoSelect">
+                        <select disabled class="form-control selectInteres" value="<%= user.intereses %>" style="height: 35px; width:150px;">
+                            <option class="optionInteres">Hombre</option>
+                            <option class="optionInteres">Mujer</option>
+                            <option class="optionInteres">Ambos</option>
+                        </select>
+                    </div>
+                    <div id="divBtnEditarInteres" class="divBtnEditarInput col-xs-3 col-md-2">
+                        <span id="editar_Interes" class="btnEditarSelect btn btn-default glyphicon glyphicon-pencil"><p class="textoBtnEditar">Editar</p></span>
+                    </div>
+                    <div id="divBtnEnviarInteres" class="divBtnEnviarInput col-xs-3 col-md-2 esconder">
+                        <button class="enviar" id="btnEnviar_interes"> <span id="finalizarEdicion_Interes"  class="btnEnviarSelect glyphicon glyphicon-ok"></span></button>
+                    </div>
+
+                </div>
+                <div class="divRow row" id="divFinalidad">
+
+                    <p class="pCampo col-xs-2 col-md-3" id="campoFinalidad" for="finalidadInf">Objetivos </p>
+
+                    <div id="divFinalidadAntiguo" class="col-xs-7 col-md-7 divContenidoSelect">
+                        <select disabled class="form-control selectFinalidad" value="<%= user.objetivos%>" style="height: 35px; width:150px;">
+                            <option class="optionFinalidad">Conocer gente</option>
+                            <option class="optionFinalidad">Lo que surga</option>
+                            <option class="optionFinalidad">Relacion</option>
+                        </select>
+                    </div>
+                    <div id="divBtnEditarFinalidad" class="divBtnEditarInput col-xs-3 col-md-2">
+                        <span id="editar_Finalidad" class="btnEditarSelect btn btn-default glyphicon glyphicon-pencil"><p class="textoBtnEditar">Editar</p></span>
+                    </div>
+                    <div id="divBtnEnviarFinalidad" class="divBtnEnviarInput col-xs-3 col-md-2 esconder">
+                        <button class="enviar" id="btnEnviar_objetivos"> <span id="finalizarEdicion_Finalidad"  class="btnEnviarSelect glyphicon glyphicon-ok"></span></button>
+                    </div>
+
+                </div>
+
+                <div class=" row" id="divGustos">
+                    <div class="col-xs-6 col-md-6 flex ">
+                        <div>
+                            <p id="txtGustosMatch" class="pCampo">Gustos</p>
+                            <div id="divListaGustosMatch"  class="divListaElegidos" >
+                                <select id="listaGustosMatch" multiple class=" form-control listas ">
+                                    <option class="optionGustosMatch"> Deportes </option>
+                                    <option class="optionGustosMatch"> Lectura </option>
+                                    <option class="optionGustosMatch"> Pasear </option>
+                                    <option class="optionGustosMatch"> Senderismo </option>
+                                    <option class="optionGustosMatch"> Arte </option>
+                                    <option class="optionGustosMatch"> Cultura </option>
+                                    <option class="optionGustosMatch"> Politica </option>
+                                    <option class="optionGustosMatch"> Filosofia </option>
+                                    <option class="optionGustosMatch"> Ciencia </option>
+                                    <option class="optionGustosMatch"> Fiesta </option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-6 flex">
+                        <div>
+                            <p id="txtGustosElegidosMatch" class="pCampo">Elegidos</p>
+                            <div id="divListaGustosElegidosMatch" class="divListaElegidos">
+                                <select id="listaGustosElegidosMatch" multiple class="listas form-control">
+                                    <% if(user.gustos){for(gusto of user.gustos){ %>
+                                    <option class="optionGustosMatch"> <%= gusto %></option>
+                                    <% }} %>
+                                </select>
+                            </div>
+                            <div>
+                                <span id="deshacerGustosElegidos" class="btnDeshacerLista glyphicon glyphicon-repeat"></span>
+                                <button id="btnEnviar_GustosElegidos" class="enviar"> <span id="acceptarGustosElegidos" class="btnAcceptarLista glyphicon glyphicon-ok"></span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="configuracionCuenta">
+                <div class="divTitZona row">
+                    <h2 class="titInfo" id="titolConfiguracionCuenta"> Configuracion Cuenta </h2>
+                </div>
+                <div class="divRow row" id="divAliasInfo">
+                    <p class="pCampo col-xs-2 col-md-3" for="aliasInf">Alias</p>
+
+                    <div id="divAlias2Antiguo" class="col-xs-7 col-md-7 divContenidoAntiguo">
+                        <input id="inputalias2Antiguo" name="aliasInfAnt" type="text" class="form-control inpAnt" placeholder="Alias" value="<%= user.alias %>" readonly="true">  </input>
+
+                    </div>
+                    <div id="divBtnEditarAlias2" class="divBtnEditarInput col-xs-3 col-md-2">
+                        <span id="editar_Alias2" class="btnEditarInput btn btn-default glyphicon glyphicon-pencil"><p class="textoBtnEditar">Editar</p></span>
+                    </div>
+
+                    <div id="divAlias2Nuevo" class="col-xs-7 col-md-7 divContenidoAntiguo esconder">
+                        <input id="inputalias2Nuevo" name="aliasInfNue" type="text" class="form-control inpNue" placeholder="Alias" value="<%= user.alias %>"/>
+                    </div>
+                    <div id="divBtnEnviarAlias2" class="divBtnEnviarInput col-xs-3 col-md-2 esconder">
+                        <button id="btnEnviar_alias2" class="enviar" > <span id="finalizarEdicion_Alias2"  class="btnEnviarInput glyphicon glyphicon-ok"></span></button>
+                    </div>
+                </div>
+                <div class="divRow row" id="divContraseñaInfo">
+                    <p class="pCampo col-xs-2 col-md-3" for="contraseñaInf">Contraseña</p>
+
+                    <div id="divContraseñaAntiguo" class="col-xs-7 col-md-7 divContenidoAntiguo">
+                        <input id="inputContraseñaAntiguo" name="contraseñaInfAnt" type="password" class="form-control inpAnt" placeholder="Contraseña" value="<%= user.password %>" readonly="true"> <%= user.contraseña %> </input>
+
+                    </div>
+                    <div id="divBtnEditarContraseña" class="divBtnEditarInput col-xs-3 col-md-2">
+                        <span id="editar_Contraseña" class="btnEditarInput btn btn-default glyphicon glyphicon-pencil"><p class="textoBtnEditar">Editar</p></span>
+                    </div>
+
+                    <div id="divContraseñaNuevo" class="col-xs-7 col-md-7 divContenidoAntiguo esconder">
+                        <input id="inputContraseñaNuevo" name="contraseñaInfNue" type="password" class="form-control inpNue" placeholder="Contraseña" value="<%= user.password %>"/>
+                    </div>
+                    <div id="divBtnEnviarContraseña" class="divBtnEnviarInput col-xs-3 col-md-2 esconder">
+                        <button class="enviar" id="btnEnviar_password"> <span id="finalizarEdicion_Contraseña"  class="btnEnviarInput glyphicon glyphicon-ok"></span></button>
+                    </div>
+                </div>
+
+
+
+                <div class="divRow row">
+                    <form action="/perfil/eliminar" method="post" id="eliminarContacto" class="col-md-12" style="text-align:center;">
+                        <button id="btnEliminarCuenta" class="btn btn-default" style="padding:10px;">Eliminar cuenta</button>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+
+</section>

@@ -1,0 +1,181 @@
+#contenido5{
+    margin-top:30px;
+
+}
+
+/*
+*BARRA OPCIONES INFORMACION PERFIL
+*/
+/*esconde la barra para dispositivos pequeños*/
+@media (max-width:770px){
+    #divAsideOpcionesInfo{
+        display:none;
+    } 
+}
+#opcionesInformacion{
+    position:absolute;
+    width:90%;
+    top:20px;
+    transition:0.01s;
+}
+
+#divListaOpcionesInformacion{
+    margin:7px;
+    margin-top: 30px;
+    text-align:center;
+}
+
+.opcionInformacion{
+    width:auto;
+    height: auto;
+    margin:15px 5px;
+    cursor: pointer;
+}
+.opcionInformacion:hover{
+    background-color: #e2e2e2; 
+}
+
+
+/*
+ESTILO GLOBAL
+*/
+
+.divTitZona{
+    border-bottom:gainsboro 1px solid;
+    margin-bottom:60px;
+}
+.titInfo{
+    text-align:center;
+    width:100%;
+    font-size:25px;
+}
+.divRow{
+    display:flex;
+    align-items: center;
+    margin-bottom:20px;
+}
+.pCampo{
+    padding-left:8%;
+    font-size: 15px;
+}
+@media(max-width:700px){
+    .pCampo{
+        padding-left: 5px;
+
+    }
+}
+.inpAnt{
+    height:45px;
+    text-align:center;
+    background-color:#f4d0a7; 
+}
+
+.inpNue{
+    height:45px;
+    text-align:center;
+}
+
+.textoBtnEditar{
+
+    display:inline;
+    font-family: sans-serif;
+}
+/*quita el borde del boton de enviar */
+.enviar{
+    padding: 0;
+    border: none;
+    background: none;
+}
+.divBtnEditarInput{
+    padding:0;
+}
+.btnEditarInput{
+    margin-left: 0;
+}
+/*SELECTS*/
+
+.divContenidoSelect{
+    display:flex;
+    justify-content: center;
+}
+
+
+/*FECHAS*/
+.optionFechaInfo{
+    margin-top:10px;
+}
+
+@media(max-width:500px){
+    #divFechaNacimientoAntiguo{
+        display:inline-block;
+        padding-left:20%;
+    }
+}
+#dia, #mes{
+    width:70px;
+    height:35px;
+}
+#año{
+    width:80px;
+    height:35px;
+}
+
+
+/*SEXO*/
+
+#divHombre, #divMujer{
+    text-align:  center;
+}
+#chHombreSexo, #chMujerSexo{
+    margin-left:10px;
+}
+
+
+/*ESTADO CIVIL*/
+.divOpcEstado{
+    display:inline;
+    margin-top:12px;
+
+}
+.chEst{
+    display:inline;
+
+}
+.pSexo{
+    font-size:15px;
+    display:inline;
+}
+
+.flex{
+    display:flex;
+    justify-content: center;
+}
+
+/*Gustos*/
+.listas{
+    overflow-y: auto;
+}
+.divLista{
+    display:inline;
+}
+
+#listaGustosMatch, #listaGustosElegidosMatch{
+    width:150px;
+    height:300px;
+}
+.optionGustosMatch, .optionGustosElegidosMatch{
+    font-size:20px;
+    color:black;
+}
+
+.btnDeshacerLista{
+    margin-left:5px;
+    margin-top:10px;
+    position: static;
+}
+
+.btnAcceptarLista{
+    margin-left:25px;
+    margin-top:10px;
+    position: static;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>PostNet</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <link href="/css/cssComunes/styleNav.css" rel="stylesheet" type="text/css"/>
+        <link href="/css/cssComunes/styleNavPerfil.css" rel="stylesheet" type="text/css"/>
+
+        <script src="/js/comunes/jsNav.js" type="text/javascript"></script>
+        <!-- <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script> -->
+        
+        <link href="/css/cssOpcPerfil/styleInformacion.css" rel="stylesheet" type="text/css"/>
+        <link href="/css/cssOpcPerfil/stylePublicaciones.css" rel="stylesheet" type="text/css"/>
+        <link href="/css/cssOpcPerfil/styleContactos.css" rel="stylesheet" type="text/css"/>
+        <link href="/css/cssOpcPerfil/styleMensajes.css" rel="stylesheet" type="text/css"/>
+        <link href="/css/cssOpcPerfil/styleUsuarios.css" rel="stylesheet" type="text/css"/>
+        <link href="/css/cssOpcPerfil/styleMatcher.css" rel="stylesheet" type="text/css"/>
+
+        <script src="/js/jsOpcPerfil/jsInformacion.js" type="text/javascript"></script>
+        <script src="/js/jsOpcPerfil/jsContactos.js" type="text/javascript"></script>
+        <script src="/js/jsOpcPerfil/jsPublicaciones.js" type="text/javascript"></script>
+        <script src="/js/jsOpcPerfil/jsMensajes.js" type="text/javascript"></script>
+        <script src="/js/jsOpcPerfil/jsUsuarios.js" type="text/javascript"></script>
+        <script src="/js/jsOpcPerfil/jsMatcher.js" type="text/javascript"></script>
+
+        <link href="/css/stylePerfil.css" rel="stylesheet"></lnk>
+        <script src="/js/jsPerfil.js" type="text/javascript"></script>
+
+    </head>
+    <body>
+
+
+    <%- include comunes/nav.ejs-%>
+
+    <%- include comunes/navPerfil.ejs -%>
+    <%- include opcPerfil/publicaciones.ejs -%>
+    <%- include opcPerfil/contactos.ejs -%>
+    <%- include opcPerfil/info.html -%>
+    <%- include opcPerfil/matcher.ejs -%>
+    <%- include opcPerfil/mensajes.ejs -%>
+    <%- include opcPerfil/usuarios.ejs -%>
+<script>
+    var notiPeticiones = "<%= user.notifications.peticiones %>";
+    var notiMensajes = "<%= user.notifications.mensajes %>";
+</script>
+    </body>
+</html>

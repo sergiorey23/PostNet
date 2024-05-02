@@ -1,0 +1,175 @@
+body{
+    overflow-x: hidden;
+    overflow-y:scroll;
+}
+
+#barraPerfil{
+    background-color:#fdfbe9; 
+}
+#fondoPortada{
+    background-image: url("../../img/descarga.jpg");
+    background-position: center;
+    background-color:#fdfbe9; 
+    background-size: cover;
+    height: 200px;
+    width: 70%;
+    margin: auto;   
+}
+
+#perfil{
+    margin-left:15px;
+}
+#imagenPerfil{
+    max-width: 130px;
+    max-height: 130px;
+    margin-top:50px;
+    border: 1px solid #13a7ba;
+}
+#divFlexFotoPerfil:hover .subirImagenPerfil{
+    visibility: visible;
+}
+
+#divFlexFotoPerfil{
+    display:flex;
+    flex-wrap: wrap;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;	
+    cursor: pointer;
+}
+.subirImagenPortada{
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    float:right;
+    margin-top:10px;
+    width:180px;
+    padding-top:5px;
+    height:30px;
+    text-align:center;
+}
+
+.subirImagenPerfil{
+    color: #fff;
+    height:30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    width:130px;
+    left:30px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:-40px;
+    visibility: hidden;
+    cursor: pointer;
+}
+
+
+
+#textoBarraPerfil{
+    color:black;
+    margin-top:50px;
+}
+
+#listaOpcionesPerfil{
+    margin:0;
+}
+#portada{
+    margin:25px 0;
+    text-align: center;
+    display:flex; 
+    justify-content:center;
+}
+#imagenPortada{
+    width: 100%;
+
+}
+
+
+#textoBarraPerfil{
+    color:white;
+}
+
+
+
+#opcionesPerfil{
+    background-color: beige;
+    border:gainsboro 1px solid;
+}
+
+.opcPerf{
+    list-style: none;
+    text-align: center;
+    height:40px;
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 7px;
+}
+.opcPerf:hover{
+    background-color: #eecd9b;
+}
+
+.linkPerfil{
+    color:black;  
+}
+.linkPerfil:hover{
+    color:#353637;
+    text-decoration:none;
+}
+
+.clickado{
+    background-color: #eecd9b;
+
+}
+#opcPubli, #opcInfor{
+    border-right:activecaption 1px solid;
+}
+
+
+@media (max-width:1000px){
+    #imagenPortada{
+        float:right;
+    }
+    #opcConta{
+        border-right:none;
+    }
+}
+@media (max-width:767px){
+    #perfil{
+        position:absolute;
+        z-index: 1;
+        top:-15px;
+    }
+    #imagenPortada{
+        float:left;
+        margin-left:70px;
+
+    }
+    #imagenPerfil{
+        border:black solid 1px;
+        width:115px;
+    }
+    #textoBarraPerfil{
+        position:absolute;
+        z-index: 1;
+        margin-left:130px;
+        bottom:0;
+        background-color:rgba(212, 86, 54, 0.3);
+        width:auto;
+    }
+    
+
+}
+@media(max-width:580px){
+    #perfil{
+        margin-left:15px;
+    }
+    #imagenPortada{
+        margin-left:0px;
+
+    }
+    #opcPubli, #opcConta, #opcInfor, #opcMatcher, #opcMensajes,#opcRecomendaciones{
+        border-bottom:activecaption 1px solid;
+        border-right:none;
+    }
+
+}

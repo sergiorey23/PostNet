@@ -1,0 +1,420 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : 22-abr-2018, 18:18:21
+    Author     : Jordi Gutierrez
+*/
+body, html{
+    width:100%;
+    height:100%;
+}
+
+a{
+    color:black;
+}
+a:hover{
+    color:#353637;
+    text-decoration:none;
+}
+
+
+/*BARRA DERECHA*/
+/*Barra derecha,posicion fija para moverse con el scroll y medio segundo de transicion para que sea leve*/
+#barraDerecha{
+    transition:0.5s;
+    position:fixed;
+    margin-top:30px;
+    left:10%;
+}
+@media (max-width:1400px){
+    #barraDerecha{
+        left:5%;
+    }
+}
+#infoUsuario{
+    background-color: #b2d4f1;
+    width:230px;
+    border-left:black 1px solid;
+    border-top:black 1px solid;
+    border-right:black 1px solid;
+}
+#fotoPerfil{
+    border-radius:50%;
+    width:80px;
+    height: 80px;
+    object-fit: fill;
+    border:#13a7ba 1px solid;
+    margin:8px 0;
+    padding:2px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#aliasUsuarioPerfilGran{
+    margin-top:30px;
+    margin-bottom:-5px;
+}
+
+#estadisticas{
+    background-color: beige;
+    width:230px;
+    text-align:center;
+    padding-top:7px;
+    padding-bottom: 7px;
+    border:black 1px solid;
+}
+
+#divPublicaciones{
+    border-right: black 0.5px solid;
+}
+
+#divPublicaciones:hover{
+    background-color: #f4d0a7;
+
+}
+#divSeguidores:hover{
+    background-color: #f4d0a7;
+}
+
+.notificationPerfil{
+    width: 20px;
+    height:  20px;
+    background-color: #ff000078;
+    border-radius:  20px;
+    padding-top: 2px;
+    margin-left: 5px
+}
+
+li .navPerfil{
+    display: flex;
+    justify-content: center;
+}
+.texMiPerfil{
+    margin:0;
+}
+.numMiPerfil{
+    margin:0;
+}
+
+/*BARRA IZQUIERDA*/
+/*css aside izquierdo, se mueve con el scroll*/
+#barraIzquierda{
+    transition:0.8s;
+    position:fixed;
+    margin-top:30px;
+    border:black 1px solid;
+    min-width:280px;
+    width:280px;
+    right:5%;
+
+}
+@media (max-width:1400px){
+    #barraIzquierda{
+        right:2%;
+    }
+}
+#headRecomendaciones{
+    padding-top:10px;
+    padding-bottom: 0;
+    margin-bottom:-10px;
+    margin-left:10px;
+}
+#titolRecomendaciones{
+    display:inline;
+    color:#999999;
+    font-style: italic;
+}
+#verTodos{
+    float:right;
+    margin-right:10px;
+}
+#verTodos:hover{
+    color:#007bff;
+}
+
+
+/*Estilo hr*/
+.separacion{
+    margin:10px 1px 5px 1px;
+}
+.usuarioMuro{
+    margin-bottom:10px;
+    margin-left:3px;
+}
+
+
+.imagenContacto{
+    border:2px solid #13a7ba;
+    border-radius:50%;
+    width:70px;
+    height:70px;
+    margin:5px 0 0 15px;
+    margin-bottom: -10px;
+}
+.nombreContacto{
+    font-size:15px;
+    margin-left:40px;
+}
+
+.btnAgregarContacto{
+    font-weight: bold;
+    font-size:12px;
+    background-color: #beb7b7;
+    color:black;
+    border-radius: 10px;
+    padding:5px;
+    text-align:center;
+    width:92%;
+    max-width:170px;
+    margin-left:100px;
+    margin-top:-30px;
+    cursor: pointer;
+}
+
+.btnAgregarContacto:hover{
+    color:gray;
+    background-color: #d9d6d6;
+}
+.agregarContacto{
+    border-radius:30px;
+}
+.iconoAgregarContacto{
+    margin-top:-5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*CABEÇERA PUBLICACION*/
+.publicacion{
+    display: flex;
+    justify-content: center;
+}
+.cabeçeraPublicacion{
+    width:550px;
+    margin-top:30px;
+    padding-top: 5px;
+    border:1px solid blanchedalmond;
+    background: #f4f6f7;
+    height: 80px;
+}
+.imgPerfilPublicacion{
+    width:60px;
+    height: 60px;
+    object-fit: fill;
+    border-radius:50%;
+    border:black 1px solid;
+    margin:5px 0;
+
+}
+
+
+.descripcionPublicacion{
+    margin:10px 0 0 0;
+    font-weight: bold;
+}
+
+
+.horaRealizacion{
+    display: inline;
+    margin-top:3px;
+}
+
+.ubicacion{
+    display:inline;
+    margin-top:3px;
+    text-align: right;
+    padding-right: 20px;
+
+}
+.lugarPublicacion{
+    font-style:italic;
+}
+
+/*COMENTARIO*/
+.cuerpoPublicacion{
+    border:1px solid blanchedalmond;
+    padding:10px;
+    background-color: #eaeef2;
+    width:550px;
+    display: inline-block;
+
+}
+
+/*TEXTO*/
+.divTextoPublicacion{
+    border:1px #e9ecee solid ;
+    padding:4px;
+    background-color: whitesmoke;
+    width:100%;
+
+}
+.textoPublicacion{
+    font-family: sans-serif;
+    text-align:justify;
+    font-weight: bold;
+    margin:10px;
+}
+
+/*LINK*/
+.divLinkPublicacion{
+    margin-top:10px;
+    border:1px #e9ecee solid ;
+    padding:10px 4px 0 4px;
+    background-color: whitesmoke;
+    width:100%;
+}
+.linkPublicacion{
+    color:black;
+    margin-left:10px;
+    word-wrap: break-word;
+
+}
+
+/*IMAGEN*/
+.divImagenPublicacion{
+    margin-top:10px;
+    border:1px #e9ecee solid ;
+    padding:20px 12px;
+    background-color: whitesmoke;
+    width:100%;
+    display:flex;
+    justify-content: center;
+}
+
+.imagenPublicacion{
+    border:black 2px solid;
+    height:auto;
+    border-radius: 2%;
+}
+
+/*COMENTARIOS*/
+
+.contenedorComentPub{
+    display:flex;
+    justify-content: center;
+    background-color:  #eaeef2;
+    width:550px;
+    display: inline-block;
+
+
+}
+
+.comentariosPublicacion{
+    padding:10px;
+    margin-bottom:0;
+
+
+}
+.divScroll{
+    max-height: 300px;
+    overflow-y:  auto;
+    overflow-x:  hidden;
+}
+.divComentario{
+    margin-top:10px;
+    border:1px #e9ecee solid ;
+    background-color: whitesmoke;
+}
+.divImagComentario{
+    display:flex;
+    justify-content:center;
+}
+.imgPerfilComentario{
+    width:45px;
+    height: 45px;
+    border-radius:50%;
+    border:black solid 1px;
+    margin-top:5px;
+    margin-left:25px;
+}
+
+.tituloComentario{
+    margin-top:5px;
+    margin-bottom:0;
+    font-weight:bold;
+    margin-left:10px;
+}
+
+.nombreUsuarioComentario{
+    font-style:italic;
+}
+.comentario{
+    margin-left:10px;
+}
+
+/*NUEVO COMENTARIO*/
+.divNuevoComentarioPub1{
+    height:100px;
+    margin-top:30px;
+    border:1px antiquewhite solid ;
+    background-color: whitesmoke;
+}
+.comentarioNuevo{
+    width:100%;
+    margin:15px;
+}
+
+textarea{
+    border:1px solid antiquewhite;
+
+}
+.enviarComentario{
+    margin-top:30px;
+    float:right;
+    margin-right:2%;
+}
+
+textarea:focus{
+    border-color: rgba(255, 144, 0, 0.8);
+
+}
+
+@media (min-width:1000px){
+
+    .enviarComentario{
+        margin-right:20px;
+    }
+}
+
+@media (max-width:1200px){
+    .cabeçeraPublicacion{
+        width:450px;
+    }
+    .cuerpoPublicacion{
+        width:450px;
+    }
+    .contenedorComentPub{
+        width:450px;
+    }
+    .comentarioNuevo{
+        width:80%;
+    }
+}
+@media(max-width:767px){
+    .publicacion{
+        margin-left:10%;
+    }
+}
+@media(max-width:550px){
+}
+@media(max-width:500px){
+    .cabeçeraPublicacion{
+        width:100%;
+    }
+    .cuerpoPublicacion{
+        width:100%;
+    }
+    .contenedorComentPub{
+        width:100%;
+    }
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+
+-->
+<html>
+<head>
+    <title>PostNet</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="/js/jsChat.js" type="text/javascript"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <link href="/css/cssComunes/styleNav.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/styleChat.css" rel="stylesheet" type="text/css"/>
+
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <% include comunes/nav.ejs %>
+    <div class="container" id="divContenedorChat">
+        <div class="row" id="cabeçeraChat">
+            <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2" >
+                <img class="imgPerfilChat img-thumbnail" src="<%= contacto.avatar %> " alt=""/>
+            </div>
+            <div class="col-xs-8 col-sm-8 col-md-10 col-lg-10">
+                <div class="infoContacto">
+                     <p class="aliasContacto"><b>@<%= contacto.alias %> </b></p>
+
+                    <p class="nombreContacto"><%= contacto.nombre %> 
+                        <%= contacto.apellidos %> </p>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="mensajesAntiguos">
+            <div class="col-xs-12">
+                <% for (var mensaje of mensajes) { %>
+                <div class="row <% if(mensaje.emisor == contacto.alias) { %>divMensajeContacto<% } else { %>divMensajeUsuario<% } %>" >                      
+                    <div class="col-xs-12 form-control mensaje <% if(mensaje.emisor == contacto.alias) { %>mensajeContacto<% } else { %>mensajeUsuario<% } %>">
+                        <p><b><%= mensaje.mensaje %></b> 
+                            <span style="font-size:10px;">
+                                 <%= mensaje.fecha.substr(11, 5) %>  
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <% } %>
+            </div>
+        </div>
+
+        <div class="row" id="mensajeNuevo">
+            <div class=" col-xs-8 col-sm-10">
+                <input type="text" placeholder="Nuevo Mensaje" class="form-control" id="inputNuevoMensaje">
+            </div>
+            <div class="col-xs-4 col-sm-2">
+                <button type="button" class="btn btn-default" id="btnEnviarMensaje" > Enviar </button>
+            </div>
+        </div>
+    </div>
+<script>
+ var userAlias = "<%= user.alias %>";
+        var contacto = <%- JSON.stringify(contacto) %>;
+        $("#mensajesAntiguos").animate({ scrollTop: $('#mensajesAntiguos')[0].scrollHeight}, 0);
+        
+</script>
+</body>
+</html>

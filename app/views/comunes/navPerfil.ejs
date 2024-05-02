@@ -1,0 +1,39 @@
+<nav id="contenido2" class="container">
+    <div class="row" id="barraPerfil">
+        <div id="fondoPortada" class="row" >
+            <div class="col-xs-7 col-sm-6 col-md-5" id="">
+                <div class="row" id="perfil">
+                    <div class="col-xs-7" id="divFlexFotoPerfil">
+                        <img id="imagenPerfil" class="img-thumbnail" src="<%= user.avatar %>"  alt="Profile pic"/>
+                        <label class="subirImagenPerfil"> 
+                            <input type="file" onchange="setPic('avatar')" class="inputSubirImagenPerfil" style="overflow: hidden; position: absolute; visibility: hidden;"/>
+                        Actualizar</label>
+                    </div>
+                    <div class="col-xs-5" id="textoBarraPerfil">
+                        <h3 class="tuAlias">@<%= user.alias %></h3>
+                        <h4 style="max-width:90px; width:90px;"> <%= user.nombre %> <%= user.apellidos %></h4>
+
+                    </div>
+                </div>
+            </div>
+            <div id="divFlexFotoPortada" class="col-xs-5 col-sm-6 col-md-7">
+                <label class="subirImagenPortada">
+                    <input type="file" onchange="setPic('portada')" class="inputSubirImagenPortada" style="overflow: hidden; position: absolute;     visibility: hidden;"/>
+                Actualizar <span class="esconderPetit">foto</span></label>
+            </div>
+        </div>
+    </div>
+
+
+    <div  id="opcionesPerfil" class="row">
+        <li class="col-sm-4 col-md-4 col-lg-2 opcPerf" id="opcPubli" name="publicaciones" >Publicaciones</li>
+        <li class="col-sm-4 col-md-4 col-lg-2 opcPerf" id="opcInfor" name="informacion">Información</li>
+        <li class="col-sm-4 col-md-4 col-lg-2 opcPerf" id="opcMensajes" name="mensajes" >Mensajes </li>
+        <li class="col-sm-4 col-md-4 col-lg-2 opcPerf" id="opcConta" name="contactos">Contactos</li>
+        <li class="col-sm-4 col-md-4 col-lg-2 opcPerf" id="opcRecomendaciones" name="usuarios">Usuarios</li>
+        <li class="col-sm-4 col-md-4 col-lg-2 opcPerf" id="opcMatcher" name="matcher" >Matcher </li>
+    </div>
+</nav>
+<script>
+    $("#fondoPortada").css("background-image","url(<%= user.portada %>)");
+</script>

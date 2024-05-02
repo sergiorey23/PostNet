@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Postnet</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <link href="/css/styleIndex.css" rel="stylesheet" type="text/css"/>
+        <script src="/js/jsIndex.js" type="text/javascript"></script>
+        <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+    </head>
+    <body class="container-fluid">
+<p> <%= incorrectValue %></p>
+        <header class="row">
+            <div class="col-sm-4" id="r"></div>
+            <div id="formRegistro1" class="formRegistro1 col-sm-8 col-md-8">
+                <form id="a" role="form" action="/login" method="post" onsubmit="return validaInicio()">
+                    <div id="divInpIni" class="a form-group" >
+                        <div id="divNomUsuarioIni" class="ini">
+                            <label id="labNomIni" class="labIni nameInici control-label" for="nomUser" >Alias</label>
+                            <input id="inpNomIni" class="inpIni nameInici form-control" name="nomUser"  type="text" >  </input>
+                        </div>
+                        <div class="ini q">
+                            <label id="labPassIni" class="labIni passInici control-label" for="pass">Contraseña</label>
+                            <input id="inpPassIni" class="inpIni form-control" name="password" type="password"> </input>
+                            <a id="passOlvi" href="#"><p id="textPassOlvi">Has olvidado tu contraseña?</p></a>
+                        </div>
+                    </div>
+                    <div id="divBtnInici" class="a ini col-sm-2">
+                        <button id="btnInici" class="btn btn-default" type="submit">Iniciar sesion</button>
+                    </div>
+
+                </form>
+            </div>
+        </header>
+        <section class="container">
+            <aside class="col-md-3" > </aside>
+            <article class="col-md-6">
+                <div class="row">
+                    <div class="divTitolLogo col-xs-12 col-md-12">
+                        <h1 id="titolWeb"> POSTNET </h1>
+                        <img id="logoWeb" width=20%  src="../img/logotipo.png" alt=""/>
+                    </div>
+                </div>
+                <form id="formReg" action="/sign-up" method="post" onsubmit="return validaRegistro()">
+                    <div id="regR" class="row">
+                        <div class="inpReg col-md-12">
+                            <input id="aliasReg" class="inpReg form-control" name="alias" type="text" placeholder="Alias" required></input>
+                        </div>
+                    </div>
+                    <div id="regR1" class="row">
+                        <div class="inpReg col-md-12">
+                            <input id="emailReg" class="inpReg form-control" name="email" type="email" placeholder="Email">
+                        </div>
+                    </div>
+                    <div id="regR2"  class="row">
+                        <div class="inpReg col-md-12">
+                            <input id="nombreReg" class="inpReg form-control" name="nombre" type="text" placeholder="Nombre" required></input>
+                            <input id="apellidosReg" class="inpReg form-control" name="apellidos" type="text" placeholder="Apellidos" required>  </input>
+                        </div>
+                    </div>
+                    <div id="regR3" class="row">
+                        <div class="inpReg col-md-12">
+                            <input id="contra1Reg" class="inpReg form-control" name="pass" type="password" placeholder="Contraseña" required> </input>
+                        </div>
+                    </div>
+                    <div id="regR4" class="row">
+                        <div class="inpReg col-md-12">
+                            <input id="contra2Reg" class="inpReg form-control" name="pass2" type="password" placeholder="Repite la contraseña" required>  </input>
+                        </div>
+                    </div>
+                    <div id="regR5" class="row">
+                        <div class="r col-xs-12 col-sm-8">
+                            <label id='fechaNac' class='control-label'>Fecha nacimiento</label>
+                            <div id="selects" class='input-group'>
+                                <select class="form-control" id="dia" name="day"> </select>
+                                <select class="form-control" id="mes" name="month"></select>
+                                <select class="form-control" id="año" name="year"></select>
+                            </div>
+                        </div>
+                        <div id="divBtnRegistro" class="col-xs-12 col-sm-4">
+                            <button id="btnRegistro" class="btn btn-default" type="submit">Registrarse</button>
+                        </div>
+                    </div>
+                </form>
+
+            </article>
+            <aside class="col-md-3"></aside>
+        </div>
+    </section>
+
+</body>
+</html>
